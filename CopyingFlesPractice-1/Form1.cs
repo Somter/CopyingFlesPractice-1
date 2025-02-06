@@ -77,7 +77,7 @@ namespace CopyingFlesPractice_1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка при копировании файла: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ошибка при копировании файла: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); 
             }
         }
 
