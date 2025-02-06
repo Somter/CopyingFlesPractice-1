@@ -101,6 +101,17 @@ namespace CopyingFlesPractice_1
         {
             Task copyingTask = new Task(CopyingFiles);
             copyingTask.Start();
+
+            copyingTask.ContinueWith(_ =>
+            {
+                Invoke(new Action(() =>
+                {
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    progressBar1.Value = 0;
+                    button3.Enabled = false;
+                }));
+            });
         }
     }
 }
